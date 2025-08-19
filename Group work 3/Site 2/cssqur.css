@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #d4ffd4;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0,0,0);
+}
+
+h1 {
+    color: green;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.next {
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.next:hover {
+    background: darkgreen;
+}
