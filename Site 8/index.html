@@ -1,24 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Word Reverser</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Test for Beginners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        input[type="text"] {
+            margin-bottom: 20px;
+            padding: 8px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #score {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <main class="container">
-    <div class="card">
-      <h1>Word Reverser</h1>
-      <input id="wordInput" type="text" placeholder="Enter a word to Reverse" />
-      <button id="reverseBtn">Reverse</button>
-      <p id="wordOut"></p>
-    </div>
+    <h1>Math Test For Beginners</h1>
+    <h3>If you pass this test, you're smarter than a 1st–5th grade student 😄</h3>
+
+    <h2>First Question</h2>
+    <h3>What is 2 x 2?</h3>
+    <input type="text" id="q1">
+
+    <h2>Second Question</h2>
+    <h3>What is 10 x 10?</h3>
+    <input type="text" id="q2">
+
+    <h2>Third Question</h2>
+    <h3>What is 15 x 2?</h3>
+    <input type="text" id="q3">
+
+    <h1>Part 2: This Is Harder</h1>
+
+    <h2>First Question</h2>
+    <h3>Choose the correct answer:</h3>
+    <input type="checkbox" id="c1">
+    <label for="c1">my name are mate</label><br>
+    <input type="checkbox" id="c2">
+    <label for="c2">my name is luka</label><br>
+    <input type="checkbox" id="c3">
+    <label for="c3">my name was mate</label><br>
+
+    <h2>Second Question</h2>
+    <h3>Choose the correct answer:</h3>
+    <input type="checkbox" id="c4">
+    <label for="c4">my friend is cinema</label><br>
+    <input type="checkbox" id="c5">
+    <label for="c5">my frend are cinmea</label><br>
+    <input type="checkbox" id="c6">
+    <label for="c6">my freind is in cinmea</label><br>
+
+    <h2>Third Question</h2>
+    <h3>Choose the correct answer:</h3>
+    <input type="checkbox" id="c7">
+    <label for="c7">Who is at the door</label><br>
+    <input type="checkbox" id="c8">
+    <label for="c8">Who are at the door</label><br>
+    <input type="checkbox" id="c9">
+    <label for="c9">Whos is at the door</label><br>
+
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <div id="score"></div>
+
     <footer>
-      <p>Made by Luka Lefs</p>
+        <h2>Developer: Luka Lefs</h2>
     </footer>
-  </main>
-  <script src="script.js"></script>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let total = 6;
+
+            // Text input answers
+            const a1 = document.getElementById('q1').value.trim();
+            const a2 = document.getElementById('q2').value.trim();
+            const a3 = document.getElementById('q3').value.trim();
+
+            if (a1 === "4") score++;
+            if (a2 === "100") score++;
+            if (a3 === "30") score++;
+
+            // Checkbox answers
+            if (document.getElementById('c2').checked &&
+                !document.getElementById('c1').checked &&
+                !document.getElementById('c3').checked) {
+                score++;
+            }
+
+            if (document.getElementById('c6').checked &&
+                !document.getElementById('c4').checked &&
+                !document.getElementById('c5').checked) {
+                score++;
+            }
+
+            if (document.getElementById('c7').checked &&
+                !document.getElementById('c8').checked &&
+                !document.getElementById('c9').checked) {
+                score++;
+            }
+
+            document.getElementById('score').textContent = `You got ${score} out of ${total} correct! 🎉`;
+        }
+    </script>
 </body>
 </html>
