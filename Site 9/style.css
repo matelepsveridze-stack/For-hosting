@@ -1,0 +1,119 @@
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #d9e4f5, #f5f7fa);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.2em;
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+
+input[type="text"] {
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  border-color: #0078ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,120,255,0.3);
+}
+
+/* ===== BUTTON ===== */
+button {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 40px;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,120,255,0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0062cc, #0099ff);
+  transform: translateY(-2px);
+}
+
+/* ===== RESULTS ===== */
+#resultBox {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+#finalScore {
+  color: #0078ff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  font-size: 0.9em;
+  color: white;
+  border-top: 1px solid #ddd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+  input[type="text"] {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
