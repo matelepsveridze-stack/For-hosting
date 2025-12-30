@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: rgb(243, 199, 119);
+}
+
+/* HEADER */
+header {
+  background:rgb(255, 106, 0);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 14px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #c7f0d4;
+}
+
+/* FOOD LIST */
+.food-list {
+  padding: 30px;
+}
+
+.food-card {
+  display: flex;
+  background: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.food-card img {
+  width: 180px;
+  height: 180px;
+  border: 2px solid black;
+  margin-right: 20px;
+}
+
+.food-info h2 {
+  margin: 0 0 10px;
+  color: black;
+}
+
+.price-cart {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-cart span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-cart button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.price-cart button:hover {
+  background: black;
+}
+
+/* CART MODAL */
+.cart-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content {
+  background: white;
+  padding: 25px;
+  width: 350px;
+  border-radius: 12px;
+}
+
+.cart-content h2 {
+  margin-top: 0;
+  color: black;
+}
+
+.cart-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-content li {
+  margin-bottom: 8px;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cart-content button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-content .close {
+  background: #999;
+}
+
+.section-title {
+  color:black;
+  margin: 40px 0 20px;
+  font-size: 28px;
+  border-bottom: 3px solid orange;
+  padding-bottom: 5px;
+}
+
+.map-container {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.map-container iframe {
+  width: 60%;
+  height: 300px;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+
+.map-info {
+  width: 40%;
+  color: black;
+}
+
+.map-info h3 {
+  margin-top: 0;
+}
+

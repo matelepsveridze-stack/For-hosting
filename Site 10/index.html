@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lukas restourant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Lukas restourant</h1>
+  <nav>
+    <button style="background-color: black; color: white;" onclick="scrollToMainFood()">Main Food</button>
+    <button style="background-color: black; color: white;" onclick="scrollToDessert()">Dessert</button>
+    <button style="background-color: black; color: white;" onclick="scrollToMap()">Map</button>
+    <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+  </nav>
+</header>
+
+<main class="food-list">
+
+  <div class="food-card">
+    <img src="https://wrapsnbeyond.com/wp-content/uploads/2025/02/classic-burger.webp" alt="Burger">
+    <div class="food-info">
+      <h2>Classic Burger</h2>
+      <p>
+        A hamburger consists of a beef patty placed inside a sliced bun,
+        served with lettuce, tomato, onion, pickles and sauce.
+      </p>
+      <div class="price-cart">
+        <span>14₾</span>
+        <button onclick="addToCart('Classic Burger', 8)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-cheeseburger-april-promo:nutrition-calculator-tile?wid=822&hei=822&dpr=off" alt="Burger">
+    <div class="food-info">
+      <h2>Cheese Burger</h2>
+      <p>
+        Juicy beef patty with melted cheese, fresh vegetables,
+        and our special house sauce.
+      </p>
+      <div class="price-cart">
+        <span>10₾</span>
+        <button onclick="addToCart('Cheese Burger', 10)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <img src="https://theeburgerdude.com/wp-content/uploads/2023/03/Double-Del-01-scaled.webp" alt="Burger">
+    <div class="food-info">
+      <h2>Double Burger</h2>
+      <p>
+        Two beef patties, extra cheese, crispy lettuce and pickles
+        for serious hunger.
+      </p>
+      <div class="price-cart">
+        <span>19,95₾</span>
+        <button onclick="addToCart('Double Burger', 14)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Desserts & Drinks</h2>
+
+<div class="food-card">
+  <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/6/1/1/FNM_070112-Milky-Way-Ice-Cream-Recipe_s4x3.jpg.rend.hgtvcom.1280.960.suffix/1382541468590.webp" alt="Ice Cream">
+  <div class="food-info">
+    <h2>Chocolate Ice Cream</h2>
+    <p>Creamy chocolate ice cream.</p>
+    <div class="price-cart">
+      <span>4₾</span>
+      <button onclick="addToCart('Vanilla Ice Cream', 4)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="https://media.istockphoto.com/id/157609589/photo/decadent-chocolate-fudge-layer-cake.jpg?s=612x612&w=0&k=20&c=l_y-C_Yn0WeylSExt2UHc1F1ql2vXCy4BcGLOXPBPak=" alt="Chocolate Cake">
+  <div class="food-info">
+    <h2>Chocolate Cake</h2>
+    <p>Rich chocolate cake with soft cream layers.</p>
+    <div class="price-cart">
+      <span>12₾</span>
+      <button onclick="addToCart('Chocolate Cake', 6)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="https://i.pinimg.com/736x/60/46/1f/60461f63e4a8960d53c17b40d8dfb41e.jpg" alt="Strawberry Ice Cream">
+  <div class="food-info">
+    <h2>Strawberry Ice Cream</h2>
+    <p>Fresh strawberry ice cream with real fruit.</p>
+    <div class="price-cart">
+      <span>4₾</span>
+      <button onclick="addToCart('Strawberry Ice Cream', 5)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVRf8IT_idHDuU0NY-7srZNZaDUk0RM8vviw&s" alt="Soda">
+  <div class="food-info">
+    <h2>Cold Soda</h2>
+    <p>Refreshing cold soda with ice.</p>
+    <div class="price-cart">
+      <span>3,50₾</span>
+      <button onclick="addToCart('Cold Soda', 3)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title" id="mapSection">Find Us</h2>
+
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps?q=restaurant&output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+
+  <div class="map-info">
+    <h3>Lukas restourant</h3>
+    <p> tbilisi,varketili-takaishvilis #37</p>
+    <p>🕒 Open: 10:00 AM – 10:00 PM</p>
+    <p>📞 Phone: +599 550-057-375</p>
+  </div>
+</div>
+
+
+</main>
+
+<!-- CART MODAL -->
+<div id="cartModal" class="cart-modal">
+  <div class="cart-content">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: $<span id="totalPrice">0</span></p>
+    <button style="background-color: orange;" onclick="checkout()">Buy Now</button>
+    <button class="close" onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
