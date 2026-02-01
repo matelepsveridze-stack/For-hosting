@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: black;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header h1 {
+    color: rgb(37, 192, 102);
+    font-size: 28px;
+}
+
+.header nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    color: rgb(0, 255, 157);
+}
+
+/* main pages surati */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,9)),
+    url("https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/408864179_342479481868687_2724919989645877908_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YRN0vJTfyYYQ7kNvwGslEqZ&_nc_oc=Adng4FOS2FB-cqFP_AGTPHFzua_RseoPZAoV8NxRO7EKSZnkC5T_cZJd5ajLc36J02E&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=3pHkluKA9wYFOkMHoJUAdw&oh=00_Afpvg7XqRUQkGJ1oXnCQ0dcdLa8oiQOnHDnIIkuxcO1jAA&oe=697A44D3") center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: rgb(0, 255, 17);
+    color: black;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background: green;
+}
+
+/* STATSSSSSSS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background: rgb(36, 35, 34);
+}
+
+.stat h3 {
+    color: rgb(22, 163, 22);
+    font-size: 40px;
+    text-align: center;
+}
+
+.stat p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* VIRGIN VS CHAD */
+.section {
+    display: flex;
+    gap: 50px;
+    padding: 80px 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section img {
+    max-width: 450px;
+    border-radius: 12px;
+}
+
+.section-text {
+    max-width: 500px;
+}
+
+.section-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* es qvemot rogor xdeba swavla egaa */
+.section-text ul {
+    margin-top: 15px; 
+}
+
+.section-text li {
+    margin-bottom: 8px;
+}
+
+/* mwvane otxkutxedebi */
+.dark-section {
+    background: black;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.dark-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: rgb(18, 172, 18);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    font-weight: bold;
+}
+
+/* FOOTERRRR */
+.footer {
+    background: black;
+    padding: 25px;
+    text-align: center;
+    color: gray;
+}
+
+/* RESPONSIVIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
+@media (max-width: 390px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header nav a {
+        margin-left: 0;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        max-width: 100%;
+    }
+
+    .section-text {
+        max-width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .about-content {
+        padding: 40px 20px;
+    }
+
+    .about-content img {
+        max-width: 100%;
+    }
+
+    .course-grid {
+        padding: 40px 20px;
+    }
+
+    .register-page {
+        padding: 40px 20px;
+    }
+
+    .register-box {
+        padding: 30px 20px;
+    }
+}

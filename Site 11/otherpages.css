@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+header {
+    background: black;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: green;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: rgb(33, 230, 75);
+}
+
+/* COURSES */
+.courses {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.course-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.course {
+    transition: transform 0.3s ease, 
+}
+
+.course:hover {
+    transform: translateY(-10px);
+}
+
+.course {
+    background-image: url("https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/408864179_342479481868687_2724919989645877908_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YRN0vJTfyYYQ7kNvwGslEqZ&_nc_oc=Adng4FOS2FB-cqFP_AGTPHFzua_RseoPZAoV8NxRO7EKSZnkC5T_cZJd5ajLc36J02E&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=3pHkluKA9wYFOkMHoJUAdw&oh=00_Afpvg7XqRUQkGJ1oXnCQ0dcdLa8oiQOnHDnIIkuxcO1jAA&oe=697A44D3");
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid rgb(25, 185, 100);
+}
+
+/* PAGES */
+.page {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.page img {
+    max-width: 500px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+/* REGISTER */
+.register {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.register form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.register input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.register button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(0, 128, 49);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register button:hover {
+    background: rgb(0, 255, 51);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
