@@ -42,7 +42,7 @@ body {
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,9)),
-    url("https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/408864179_342479481868687_2724919989645877908_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YRN0vJTfyYYQ7kNvwGslEqZ&_nc_oc=Adng4FOS2FB-cqFP_AGTPHFzua_RseoPZAoV8NxRO7EKSZnkC5T_cZJd5ajLc36J02E&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=3pHkluKA9wYFOkMHoJUAdw&oh=00_Afpvg7XqRUQkGJ1oXnCQ0dcdLa8oiQOnHDnIIkuxcO1jAA&oe=697A44D3") center/cover;
+    url("images/image1.jpg") center/cover;
     display: flex;
     align-items: center;
     padding: 0 60px;
